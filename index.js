@@ -10,9 +10,9 @@ const http = require('http').createServer(app); // Create an HTTP server
 //        console.error('Error finding an available port:', err);
 //     return;
 // }
-
-http.listen(8000, () => {
-    console.log(`Server is running on port ${8000}`);
+const port = process.env.PORT || 8000;
+http.listen(port, () => {
+    console.log(`Server is running on port ${port}`);
 });
 
 // Rest of your code for socket.io should use the 'http' server
